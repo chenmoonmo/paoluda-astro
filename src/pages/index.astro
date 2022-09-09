@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Hopes from "../views/home/Hopes";
+---
+
+<Layout title="泡鲁达の旅">
+  <main>
+    <section
+      class="bg-[url('/main_bg.jpg')] bg-cover bg-center h-screen sm:h-[680px] max-h-screen flex flex-col justify-center items-center brightness-90"
+    >
+      <h1
+        class="text-[30px] leading-10 text-[rgb(16,185,129)] font-medium sm:text-[36px] sm:leading-[46px]"
+      >
+        泡鲁达の旅 🥥
+      </h1>
+      <div
+        class="mt-4 font-[Staatliches] text-[48px] leading-[58px] text-center font-[700] text-white sm:text-[96px] sm:leading-[115px]"
+      >
+        <div>芒市, 大理</div>
+        <div>& <span class="italic">昆明</span></div>
+      </div>
+      <div class="text-white font-[IBM Plex Sans] font-normal mt-4 text-[20px]">
+        16 - 19 September 2022 | YUNNAN
+      </div>
+      <a
+        href="https://chenmoonmo.notion.site/d24451a5370942c48fadd99d5f262df8"
+        target="_blank"
+        class="bg-white py-4 px-6 rounded-lg mt-10 font-semibold font-[Source Sans Pro]"
+        >Learn More ✈️</a
+      >
+    </section>
+    <section class="flex flex-col items-center px-6 pb-16">
+      <Card
+        name="王西北"
+        avatar="wangxibei.jpeg"
+        desc="普通躺尸人（胃口小，吃多了会吐）， 鹈鹕、水豚、白熊、凶猛の虎虎！！！"
+      />
+      <Card
+        name="哨哨子"
+        avatar="shaozi.jpeg"
+        desc="世界上最迷人的无与伦比的绝妙的艺术殿堂级的美少年偶像。据说可以一天五顿（此人一周只有一天可以五顿，其余六天为正常饭量）。"
+      />
+      <Card
+        name="张杰"
+        avatar="zhangjie.jpeg"
+        desc="唯一指定母亲❤，快乐男声张杰本人。"
+      />
+    </section>
+    <section
+      class="bg-[url('/sub_bg.jpg')] bg-cover bg-center flex flex-col items-center justify-between p-20 brightness-80 text-white sm:flex-row sm:items-stretch sm:justify-center whitespace-nowrap"
+    >
+      <div class="text-center sm:flex sm:flex-col sm:justify-between">
+        <div
+          class="font-[Staatliches] text-[36px] leading-[46px] sm:text-[48px] sm:leading-[62px]"
+        >
+          4
+        </div>
+        <div class="font-[IBM Plex Sans] text-[19px] mt-2">天不停歇</div>
+      </div>
+      <div
+        class="text-center sm:flex sm:flex-col sm:justify-between mt-10 sm:mt-0 sm:ml-40"
+      >
+        <div
+          class="font-[Staatliches] text-[36px] leading-[46px] sm:text-[48px] sm:leading-[62px]"
+        >
+          3
+        </div>
+        <div class="font-[IBM Plex Sans] text-[19px] mt-2">座城市</div>
+      </div>
+      <div
+        class="text-center sm:flex sm:flex-col sm:justify-between mt-10 sm:mt-0 sm:ml-40"
+      >
+        <div
+          class="font-[Staatliches] text-[36px] leading-[46px] sm:text-[48px] sm:leading-[62px]"
+        >
+          ♾️
+        </div>
+
+        <div class="font-[IBM Plex Sans] text-[19px] mt-2">顿的云南美食</div>
+      </div>
+    </section>
+    <Hopes client:load />
+  </main>
+</Layout>

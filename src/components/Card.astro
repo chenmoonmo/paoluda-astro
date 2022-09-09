@@ -1,0 +1,39 @@
+---
+export interface Props {
+  avatar: string;
+  name: string;
+  desc: string;
+}
+
+const { avatar, name, desc } = Astro.props;
+---
+
+<div
+  class="preson-card flex flex-col items-center text-white mt-16 sm:flex-row sm:items-start"
+>
+  <div class="text-container sm:mr-[60px]">
+    <h1 class="text-[36px] font-semibold sm:text-[48px] sm:leading-[62px]">{name}</h1>
+    <div
+      class="font-[IBMPlexSans] text-[20px] font-normal mt-4 mb-6 sm:max-w-xs"
+    >
+      {desc}
+    </div>
+  </div>
+  <div class="avatar-container w-full aspect-square rounded-md overflow-hidden sm:max-w-[380px]">
+    <img src={avatar} alt="" />
+  </div>
+</div>
+
+<style>
+  .preson-card:nth-child(even) {
+	@apply flex-col-reverse mt-20 sm:flex-row-reverse;
+  }
+  .preson-card:nth-child(even) .text-container {
+	@apply mr-0;
+  }
+  .preson-card:nth-child(even)  .avatar-container {
+	@apply mb-4 sm:mb-0 sm:mr-[60px];
+  }
+
+
+</style>
