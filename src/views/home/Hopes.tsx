@@ -27,9 +27,9 @@ const Hopes: React.FC = (): React.ReactElement => {
                 opacity: 0,
               }}
               animate={{
-                opacity: [0.6, 1, 0.4, 0],
-                x: [-10, 40],
-                y: [5, -40],
+                opacity: [1, 0.4, 0],
+                x: [0, 20],
+                y: [0, -20],
                 transitionEnd: {
                   display: "none",
                 },
